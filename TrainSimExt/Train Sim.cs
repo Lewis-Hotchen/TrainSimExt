@@ -72,8 +72,10 @@ namespace TrainSimExt {
             //If the journey is null instantiate it, otherwise add node
             if (journey == null) {
                 journey = new Journey(newStop.NewStop, 50);
+                updateRemoveList();
             } else {
                 journey.AddStop(newStop.NewStop);
+                updateRemoveList();
             }//else
 
             //Loop through the stops and display them
@@ -101,7 +103,7 @@ namespace TrainSimExt {
             } catch (Exception) {
                 return false;
             }
+        }//testString
 
-        }
-    }
-}
+    }//class
+}//namespace

@@ -29,7 +29,7 @@ namespace TrainSimExt {
             temp.NextStop = newStop;
             CalcDistTime();
         }//addStop
-        
+
         /// <summary>
         /// Calculates the distance of the journey (updates every time a new stop is added)
         /// </summary>

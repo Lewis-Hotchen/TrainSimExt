@@ -99,7 +99,7 @@
             // lblStops
             // 
             this.lblStops.AutoSize = true;
-            this.lblStops.Location = new System.Drawing.Point(107, 124);
+            this.lblStops.Location = new System.Drawing.Point(106, 124);
             this.lblStops.Name = "lblStops";
             this.lblStops.Size = new System.Drawing.Size(37, 13);
             this.lblStops.TabIndex = 7;
@@ -113,6 +113,7 @@
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "Remove Stop";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // trainSim
             // 
