@@ -39,10 +39,10 @@ namespace TrainSimExt {
             while (temp != null) {
                 Distance += temp.MilesToNext;
                 temp = temp.NextStop;
-            }
+            }//while
 
             //Calcualte the time the journey takes
             Time = Distance / Speed;
-        }
+        }//calcDistTime
     }//class
 }//namespace

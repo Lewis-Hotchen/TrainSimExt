@@ -25,6 +25,11 @@ namespace TrainSimExt {
             }
         }//constructor
 
+        /// <summary>
+        /// When you click the button to add the stop
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e) {
             try {
                 //Save the information
