@@ -67,21 +67,29 @@ namespace TrainSimExt {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAddStop_Click(object sender, EventArgs e) {
-            Add_Stop newStop = new Add_Stop();
-            newStop.ShowDialog();
+            Add_Stop newStop = new Add_Stop();                //Create temp new stop
+            newStop.ShowDialog();                
+            //If the journey is null instantiate it, otherwise add node
             if (journey == null) {
                 journey = new Journey(newStop.NewStop, 50);
             } else {
                 journey.AddStop(newStop.NewStop);
-            }
+            }//else
+
+            //Loop through the stops and display them
             Stop tracker = journey.FirstStop;
             lblStops.Text = "Stops:";
             do {
                 lblStops.Text += tracker.getStopDetails();
                 tracker = tracker.NextStop;
             } while (tracker != null);
-        }
+        }//btnAddStop_Click
 
+        /// <summary>
+        /// Method to test if a string is a valid integer
+        /// </summary>
+        /// <param name="test"></param>
+        /// <returns></returns>
         private bool testString(String test) {
             try {
                 Convert.ToInt32(test);
