@@ -20,3 +20,14 @@ C:\Users\LHotchen\Source\Repos\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\Tr
 C:\Users\LHotchen\Source\Repos\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.csproj.CoreCompileInputs.cache
 C:\Users\LHotchen\Source\Repos\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.exe
 C:\Users\LHotchen\Source\Repos\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.pdb
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\bin\Debug\TrainSimExt.exe.config
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\bin\Debug\TrainSimExt.exe
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\bin\Debug\TrainSimExt.pdb
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.csprojResolveAssemblyReference.cache
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.Add_Stop.resources
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.trainSim.resources
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.Properties.Resources.resources
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.csproj.GenerateResource.cache
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.csproj.CoreCompileInputs.cache
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.exe
+C:\Users\Lewis\Source\Repos\TrainSimExt\TrainSimExt2\TrainSimExt\TrainSimExt\obj\Debug\TrainSimExt.pdb

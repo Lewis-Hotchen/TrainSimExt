@@ -114,22 +114,22 @@ namespace TrainSimExt {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAddTrain_Click(object sender, EventArgs e) {
-            //flag for testing if a train already exists
-            bool flag = false;                
-            if (testString(txtName.Text)) {                           //Test if the ID is valid
-                trains.Add(new Train(Convert.ToInt32(txtName.Text))); //Add the train into the list of trains
-                cmbTrains.Items.Clear();                              //Clear the combobox
-                foreach (Train t in trains) {                         //For each train in the list of trains
-                    for (int index = 0; index < cmbTrains.Items.Count; index++) {           //For each item in the combo box
-                        if (t.ID == Convert.ToInt32(cmbTrains.Items[index].ToString())) {   //Test if the ID of the train is equal to the ID of
-                            flag = true;                                    //If any are equal set flag to true
-                            MessageBox.Show("That train already exists!");  
-                        }//if
-                    }//for
-                    if (flag == false) {
-                        cmbTrains.Items.Add(t.ID);  //Add the train to the combo box
+            //flag for testing if a train already exists          
+            bool flag = false;
+            if (testString(txtName.Text)) {        //Test if the ID is valid
+                //Loop through list of trains and test if the id has been used
+                foreach(Train t in trains) {
+                    if (t.ID == Convert.ToInt32(txtName.Text)) {
+                        flag = true;
                     }//if
                 }//foreach
+
+                if (flag) {
+                    MessageBox.Show("This train already exists!");
+                } else {
+                    trains.Add(new Train(Convert.ToInt32(txtName.Text))); //Add the train into the list of trains
+                    cmbTrains.Items.Add(txtName.Text);
+                }//else
             } else {
                 MessageBox.Show("ID is invalid!");
             }//else
