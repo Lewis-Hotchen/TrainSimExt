@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TrainSimExt {
-    class Journey {
+    public class Journey {
         public int Distance { get; set; }   //This is in miles
         public int Time { get; set; }          //This is in hours
         public int Speed { get; set; }         //This is in mph
@@ -29,7 +29,7 @@ namespace TrainSimExt {
             temp.NextStop = newStop;
             CalcDistTime();
         }//addStop
-
+        
         /// <summary>
         /// Calculates the distance of the journey (updates every time a new stop is added)
         /// </summary>
@@ -39,10 +39,22 @@ namespace TrainSimExt {
             while (temp != null) {
                 Distance += temp.MilesToNext;
                 temp = temp.NextStop;
-            }
+            }//while
 
             //Calcualte the time the journey takes
             Time = Distance / Speed;
-        }
+        }//calcDistTime
+
+        public override String ToString() {
+            //Loop through the stops and display them
+            Stop tracker = FirstStop;
+            StringBuilder sb = new StringBuilder();
+            do {
+                sb.Append(tracker.getStopDetails());
+                tracker = tracker.NextStop;
+            } while (tracker != null);
+
+            return sb.ToString();
+        }//ToString
     }//class
 }//namespace

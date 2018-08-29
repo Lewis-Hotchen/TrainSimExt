@@ -28,8 +28,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMiles = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.lblSpeed = new System.Windows.Forms.Label();
-            this.txtSpeed = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtName
@@ -74,31 +72,11 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // lblSpeed
-            // 
-            this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Location = new System.Drawing.Point(117, 97);
-            this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(64, 13);
-            this.lblSpeed.TabIndex = 5;
-            this.lblSpeed.Text = "Enter speed";
-            this.lblSpeed.Visible = false;
-            // 
-            // txtSpeed
-            // 
-            this.txtSpeed.Location = new System.Drawing.Point(186, 95);
-            this.txtSpeed.Name = "txtSpeed";
-            this.txtSpeed.Size = new System.Drawing.Size(65, 20);
-            this.txtSpeed.TabIndex = 6;
-            this.txtSpeed.Visible = false;
-            // 
             // Add_Stop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 165);
-            this.Controls.Add(this.txtSpeed);
-            this.Controls.Add(this.lblSpeed);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtMiles);
             this.Controls.Add(this.label1);
@@ -118,7 +96,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMiles;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Label lblSpeed;
-        private System.Windows.Forms.TextBox txtSpeed;
     }
 }

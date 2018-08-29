@@ -32,7 +32,7 @@ namespace TrainSimExt {
             Task<string> getUpdate = Task.Run(() => MoveTrain());   //Setup task to simulate train
             String update = await getUpdate;    //Save result in string
             return update;                      //Return the result
-        }
+        }//StartTrain
 
         /// <summary>
         /// This handles the simulation of time passing
@@ -51,10 +51,10 @@ namespace TrainSimExt {
             TimeRunning += Ttime * 60;          //Add on the time to keep track of how long has passed
             if(CurrStop.NextStop == null) {     //If the next stop is empty
                 //Return the string that the train has reached it's destination
-                return "Train has reached destination: " + CurrStop.Name + " at " + TimeRunning + " minutes";
+                return "Train has reached destination: " + CurrStop.Name + " at " + TimeRunning.ToString("0.0") + " minutes";
             } else {
                 //Return the string that the train is at the next stop with timestamp
-                return "Stopped at " + CurrStop.Name + ", at " + TimeRunning + " minutes"; 
+                return "Stopped at " + CurrStop.Name + ", at " + TimeRunning.ToString("0.0") + " minutes"; 
             }//if else
            
         }//moveTrain

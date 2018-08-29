@@ -31,7 +31,7 @@ namespace TrainSimExt {
                 train = new Train(Convert.ToInt32(txtName.Text));   //Instatiate the train
                 String res = "";                                    //String that holds the result of the update
 
-                if (journey != null && journey.FirstStop.NextStop != null) { //Tests if the journey is not null or if the first stop has no other stops
+                if (journey != null || journey.FirstStop.NextStop == null) { //Tests if the journey is not null or if the first stop has no other stops
                     Ttracker = journey.FirstStop;                            //Set temporary stop to the first stop in the journey
                     lblStops.Text = "Stops:";                                //Set the text for the stops overview label
                     do {
@@ -67,13 +67,15 @@ namespace TrainSimExt {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAddStop_Click(object sender, EventArgs e) {
-            Add_Stop newStop = new Add_Stop(journey);           //Create temp new stop
+            Add_Stop newStop = new Add_Stop();                //Create temp new stop
             newStop.ShowDialog();                
             //If the journey is null instantiate it, otherwise add node
             if (journey == null) {
-                journey = new Journey(newStop.NewStop, newStop.Speed);
+                journey = new Journey(newStop.NewStop, 50);
+                updateRemoveList();
             } else {
                 journey.AddStop(newStop.NewStop);
+                updateRemoveList();
             }//else
 
             //Loop through the stops and display them
@@ -100,7 +102,7 @@ namespace TrainSimExt {
                 return false;
             } catch (Exception) {
                 return false;
-            }//catch
+            }
         }//testString
 
     }//class

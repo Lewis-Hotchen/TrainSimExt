@@ -1,0 +1,6 @@
+C:\Users\LHotchen\source\repos\TrainSimExt2\TrainSimExt\obj\Debug\TrainSimExt.csprojResolveAssemblyReference.cache
+C:\Users\LHotchen\source\repos\TrainSimExt2\TrainSimExt\obj\Debug\TrainSimExt.Add_Stop.resources
+C:\Users\LHotchen\source\repos\TrainSimExt2\TrainSimExt\obj\Debug\TrainSimExt.trainSim.resources
+C:\Users\LHotchen\source\repos\TrainSimExt2\TrainSimExt\obj\Debug\TrainSimExt.Properties.Resources.resources
+C:\Users\LHotchen\source\repos\TrainSimExt2\TrainSimExt\obj\Debug\TrainSimExt.csproj.GenerateResource.Cache
+C:\Users\LHotchen\source\repos\TrainSimExt2\TrainSimExt\obj\Debug\TrainSimExt.csproj.CoreCompileInputs.cache

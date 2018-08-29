@@ -16,18 +16,10 @@ namespace TrainSimExt {
             MilesToNext = milesToNext;
         }//Constructor
 
-        /// <summary>
-        /// Use this when displaying a stop
-        /// </summary>
-        /// <returns></returns>
         public String getStopDetails() {
             return "\n" + "Name: " + Name + " Miles to Next: " + MilesToNext;
         }
 
-        /// <summary>
-        /// Use this when displaying the destination
-        /// </summary>
-        /// <returns></returns>
         public String getLastStopDetails() {
             return "\n" + "Name: " + Name + " Last Stop";
         }

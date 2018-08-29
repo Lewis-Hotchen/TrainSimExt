@@ -32,7 +32,7 @@ namespace TrainSimExt {
             Task<string> getUpdate = Task.Run(() => MoveTrain());   //Setup task to simulate train
             String update = await getUpdate;    //Save result in string
             return update;                      //Return the result
-        }//StartTrain
+        }
 
         /// <summary>
         /// This handles the simulation of time passing

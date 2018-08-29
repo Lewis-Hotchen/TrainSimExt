@@ -32,12 +32,16 @@
             this.btnAddStop = new System.Windows.Forms.Button();
             this.lblStops = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.cmbTrains = new System.Windows.Forms.ComboBox();
+            this.btnAddTrain = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblSpeed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(9, 201);
+            this.lblOutput.Location = new System.Drawing.Point(9, 217);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(0, 13);
             this.lblOutput.TabIndex = 0;
@@ -55,7 +59,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(9, 21);
+            this.lblDesc.Location = new System.Drawing.Point(9, 9);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(92, 13);
             this.lblDesc.TabIndex = 2;
@@ -63,7 +67,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(96, 53);
+            this.txtName.Location = new System.Drawing.Point(12, 53);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(102, 20);
             this.txtName.TabIndex = 3;
@@ -71,7 +75,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(13, 56);
+            this.lblName.Location = new System.Drawing.Point(9, 36);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(45, 13);
             this.lblName.TabIndex = 4;
@@ -80,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 91);
+            this.label1.Location = new System.Drawing.Point(12, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 5;
@@ -88,7 +92,7 @@
             // 
             // btnAddStop
             // 
-            this.btnAddStop.Location = new System.Drawing.Point(12, 119);
+            this.btnAddStop.Location = new System.Drawing.Point(12, 150);
             this.btnAddStop.Name = "btnAddStop";
             this.btnAddStop.Size = new System.Drawing.Size(75, 23);
             this.btnAddStop.TabIndex = 6;
@@ -99,27 +103,66 @@
             // lblStops
             // 
             this.lblStops.AutoSize = true;
-            this.lblStops.Location = new System.Drawing.Point(106, 124);
+            this.lblStops.Location = new System.Drawing.Point(155, 122);
             this.lblStops.Name = "lblStops";
-            this.lblStops.Size = new System.Drawing.Size(37, 13);
+            this.lblStops.Size = new System.Drawing.Size(0, 13);
             this.lblStops.TabIndex = 7;
-            this.lblStops.Text = "Stops:";
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(12, 148);
+            this.btnRemove.Location = new System.Drawing.Point(12, 179);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "Remove Stop";
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // cmbTrains
+            // 
+            this.cmbTrains.FormattingEnabled = true;
+            this.cmbTrains.Location = new System.Drawing.Point(158, 52);
+            this.cmbTrains.Name = "cmbTrains";
+            this.cmbTrains.Size = new System.Drawing.Size(121, 21);
+            this.cmbTrains.TabIndex = 9;
+            this.cmbTrains.SelectedIndexChanged += new System.EventHandler(this.cmbTrains_SelectedIndexChanged);
+            // 
+            // btnAddTrain
+            // 
+            this.btnAddTrain.Location = new System.Drawing.Point(12, 80);
+            this.btnAddTrain.Name = "btnAddTrain";
+            this.btnAddTrain.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTrain.TabIndex = 10;
+            this.btnAddTrain.Text = "Add Train";
+            this.btnAddTrain.UseVisualStyleBackColor = true;
+            this.btnAddTrain.Click += new System.EventHandler(this.btnAddTrain_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(155, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Journey Overview";
+            // 
+            // lblSpeed
+            // 
+            this.lblSpeed.AutoSize = true;
+            this.lblSpeed.Location = new System.Drawing.Point(253, 122);
+            this.lblSpeed.Name = "lblSpeed";
+            this.lblSpeed.Size = new System.Drawing.Size(44, 13);
+            this.lblSpeed.TabIndex = 12;
+            this.lblSpeed.Text = "Speed: ";
             // 
             // trainSim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 330);
+            this.Controls.Add(this.lblSpeed);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnAddTrain);
+            this.Controls.Add(this.cmbTrains);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lblStops);
             this.Controls.Add(this.btnAddStop);
@@ -147,6 +190,10 @@
         private System.Windows.Forms.Button btnAddStop;
         private System.Windows.Forms.Label lblStops;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.ComboBox cmbTrains;
+        private System.Windows.Forms.Button btnAddTrain;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSpeed;
     }
 }
 

@@ -15,15 +15,28 @@ namespace TrainSimExt {
     /// </summary>
     public partial class Add_Stop : Form {
         public Stop NewStop;    //The stop that will be added
-        public Add_Stop() {
+        public int Speed;
+        public Add_Stop(Journey journey) {
             InitializeComponent();
             NewStop = null;     //Initially set it to null
+            if(journey == null) {
+                txtSpeed.Visible = true;
+                lblSpeed.Visible = true;
+            }
         }//constructor
 
+        /// <summary>
+        /// When you click the button to add the stop
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSubmit_Click(object sender, EventArgs e) {
             try {
                 //Save the information
                 NewStop = new Stop(txtName.Text, Convert.ToInt32(txtMiles.Text));   
+                if(txtSpeed.Visible == true) {
+                    Speed = Convert.ToInt32(txtSpeed.Text);
+                }
                 //Close the form
                 this.Close();   
             } catch (System.FormatException) {  
